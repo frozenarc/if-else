@@ -16,8 +16,8 @@ public class Work<T, U> implements Do<T, U> {
     }
 
     static <T, U> Work<T, U> of(Function<T, Boolean> whnFn) {
-        Work<T, U> worker = new Work<>();
-        return worker.whnFn(whnFn);
+        Work<T, U> work = new Work<>();
+        return work.whnFn(whnFn);
     }
 
     private Work<T, U> whnFn(Function<T, Boolean> whnFn) {
@@ -34,4 +34,5 @@ public class Work<T, U> implements Do<T, U> {
         this.elsFn = elsFn;
         return this;
     }
+
 }

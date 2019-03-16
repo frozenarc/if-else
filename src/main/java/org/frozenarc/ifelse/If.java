@@ -9,4 +9,5 @@ public interface If {
                 .thnFn(thnFn)
                 .elsFn(elsFn);
     }
+
 }

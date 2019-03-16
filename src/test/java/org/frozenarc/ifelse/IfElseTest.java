@@ -1,7 +1,5 @@
 package org.frozenarc.ifelse;
 
-import org.frozenarc.ifelse.If;
-import org.frozenarc.ifelse.Work;
 import org.junit.Assert;
 import org.junit.Test;
 
