@@ -1,7 +1,7 @@
 package org.frozenarc.ifelse;
 
-public interface Else<T, U> {
+public interface Else<T, S> {
 
-    Work<T, U> els(Do<T, U> elsFn);
+    Work<T, S> els(Do<T, S> elsFn);
 
 }

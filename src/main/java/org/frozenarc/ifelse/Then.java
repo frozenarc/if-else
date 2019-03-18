@@ -1,7 +1,7 @@
 package org.frozenarc.ifelse;
 
-public interface Then<T, U> {
+public interface Then<T, S> {
 
-    Else<T, U> thn(Do<T, U> thnFn);
+    Else<T, S> thn(Do<T, S> thnFn);
 
 }

@@ -2,35 +2,35 @@ package org.frozenarc.ifelse;
 
 import java.util.function.Function;
 
-public class Work<T, U> implements Do<T, U> {
+public class Work<T, S> implements Do<T, S> {
 
     private Function<T, Boolean> whnFn;
-    private Do<T, U> thnFn;
-    private Do<T, U> elsFn;
+    private Do<T, S> thnFn;
+    private Do<T, S> elsFn;
 
     @Override
-    public U doFor(T value) {
+    public S doFor(T value) {
         return whnFn.apply(value)
                 ? thnFn.doFor(value)
                 : elsFn.doFor(value);
     }
 
-    static <T, U> Work<T, U> of(Function<T, Boolean> whnFn) {
-        Work<T, U> work = new Work<>();
+    static <T, S> Work<T, S> of(Function<T, Boolean> whnFn) {
+        Work<T, S> work = new Work<>();
         return work.whnFn(whnFn);
     }
 
-    private Work<T, U> whnFn(Function<T, Boolean> whnFn) {
+    private Work<T, S> whnFn(Function<T, Boolean> whnFn) {
         this.whnFn = whnFn;
         return this;
     }
 
-    Work<T, U> thnFn(Do<T, U> thnFn) {
+    Work<T, S> thnFn(Do<T, S> thnFn) {
         this.thnFn = thnFn;
         return this;
     }
 
-    Work<T, U> elsFn(Do<T, U> elsFn) {
+    Work<T, S> elsFn(Do<T, S> elsFn) {
         this.elsFn = elsFn;
         return this;
     }

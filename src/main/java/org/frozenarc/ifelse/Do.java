@@ -1,7 +1,7 @@
 package org.frozenarc.ifelse;
 
-public interface Do<T, U> {
+public interface Do<T, S> {
 
-    U doFor(T value);
+    S doFor(T value);
 
 }

@@ -4,8 +4,8 @@ import java.util.function.Function;
 
 public interface If {
 
-    static <T, U> Then<T, U> of(Function<T, Boolean> whnFn) {
-        return thnFn -> elsFn -> Work.<T, U>of(whnFn)
+    static <T, S> Then<T, S> of(Function<T, Boolean> whnFn) {
+        return thnFn -> elsFn -> Work.<T, S>of(whnFn)
                 .thnFn(thnFn)
                 .elsFn(elsFn);
     }
